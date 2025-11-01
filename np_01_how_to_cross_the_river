@@ -1,0 +1,35 @@
+PROBLEM: HOW TO CROSS THE RIVER?
+
+A farmer with a fox, a goose, and a sack of corn needs to cross a river.
+The farmer has a rowboat, but there is room for only the farmer and one of his three items.
+Unfortunately, both the fox and the goose are hungry.
+The fox cannot be left alone with the goose, or the fox will eat the goose.
+Likewise, the goose cannot be left alone with the sack of corn, or the goose will eat the corn.
+How does the farmer get everthing across the river?
+
+SOLUTION:
+ 1. The farmer gets the goose across the river, leaving the fox and the sack of corn.
+ 2. The farmer gets back and takes the sack of corn with him this time, leaving only the fox.
+ 3. The farmer on the way back to the starting shore, takes the goose back.
+ 4. The farmer now takes the fox across the river, leaving only the goose behind.
+ 5. The farmer goes back to starting shore, and finally gets the goose across the river.
+
+SOLUTION (break down into small actionable steps):
+ 1. if the boat is empty, load (the goose) into the boat
+ 2. row the boat from (near shore) to (far shore)
+ 3. if the boat is not empty, unload (the goose) from the boat
+ 4. row the boat from (far shore) to (near shore)
+ 5. if the boat is empty, load (the fox) into the boat
+ 6. row the boat from (near shore) to (far shore)
+ 7. if the boat is not empty, unload (the fox) from the boat
+ 8. if the boat is empty, load (the goose) into the boat
+ 9. if the boat is on the far shore, row the boat to near shore
+ 10. if the boat is not empty, unload (the goose) from the boat
+ 11. if the boat is empty, load (the sack of corn) into the boat
+ 12. if the boat is on the near shore, row the boat to far shore
+ 13. if the boat is not empty, unload (the sack of corn) from the boat
+ 14. if the boat is on the far shore, row the boat to the near shore
+ 15. if the boat is empty, load (the goose) into the boat
+ 16. if the boat is on the near shore, row the boat to the far shore
+ 17. if the boat is not empty, unload (the goose) from the boat
+ 18. if three items are on the far shore safely, finish

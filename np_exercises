@@ -1,0 +1,59 @@
+1-1. Can you write a general plan for solving a sudoku?
+
+ 1) Each 3x3 block, column, or row should contain numbers from 1 to 9. Each number can be used only once.
+ Find blocks, columns, or rows that have only 1 missing number. Then define which number from 1 to 9 is missing, and enter it in the cell.
+ 2) Since each number can be used in a block, a column, or a row only once, find missing numbers in block, column, or row.
+ If you have found a missing number "8" in a 3x3 block, then look for all the columns and rows, that intersect with that block.
+ For all the empty cells that are a part of a column or a row that contain the missing number in a block, rule them out.
+ If there is only one empty cell left in a block, that could contain a missing number, enter it there.
+ Similarly, if you make a column as an anchor, and empty cells in that column intersect with blocks or rows, that contain the missing number, rule them out.
+
+1-2. How much does the picture variant of sliding tile puzzle increase the difficulty, and why?
+
+ I am too lazy to find out in real life, but I'll make a wild guess. It increases difficulty significantly, until you get used to pictures.
+ The reason is, I guess, in our perception of ordered numbers: we know which number comes next, and we can instantly spot it among other tiles.
+ But with pictures, we need to get used to the order of pictures. We spend time mainly on two things, on memorizing the correct final order,
+ and on spotting the required tile among others. These pictures do not represent some order to us, but numbers do (ex. 1-14 in a 4x4 grid)
+
+1-3. Find a strategy for sliding tile puzzles different from mine.
+
+ I used to solve 4x4 sliding puzzle, by completing each row in an ordered manner starting from the top, until I left with 2x4 tiles.
+
+1-4. Search for old-fashioned puzzles (e.g. by Sam Loyd) and try to solve them. Think of how you would make the puzzle.
+
+ Great Picnic Puzzle.
+
+ When they started off on the great annual picnic every wagon in town was pressed into service, each one carrying the same number of people.
+ Half way to the picnic ground ten wagons broke down, so it was necessary for each of the remaining wagons to carry one more person.
+ When they started for home it was discovered that fifteen more wagons were out of commission, so on the return trip there were three persons more in each wagon than when they started out in the morning.
+ Now who can tell how many people attended the great annual picnic?
+
+ If the number of wagons is y, and they contain x number of people.
+ (y - 10) wagons can carry (x + 1) people each.
+ (y - 25) wagons can carry (x + 4) people each.
+ If total number of people left is P:
+ 	P = y * x
+ , then after the first distribution, P is same:
+ 	P = (y - 10) * (x + 1)
+ , then after the second distribution:
+ 	P = (y - 25) * (x + 3)
+ We can simlify:
+ 	xy = xy - 10x + y - 10 = xy - 25x + 3y - 75
+	0 = y - 10x - 10 = 3y - 25x - 75 (*3)
+	0 = 3y - 30x - 30 = 3y - 25x - 75
+	0 = 5x - 45
+	x = 9
+	y = 10 * 9 + 10 = 100
+	P = 9 * 100 = 900
+
+ The answer is 900 people left the town on 100 wagons.
+
+ The wording on this puzzle is actually not bad. (I am lazy)
+
+1-5. Try to write some explicit strategies for other traditional pen-and-pencil games, like crosswords.
+
+ 1. You always start by scanning a list of questions. Fast. To find words that immediately come to mind. Then check the questions position, and if your word fits the number of empty spaces.
+ 2. Then, you start solving it one by one, starting from the words that have the least amount of empty spaces left, i.e. words mostly filled with your answers from previous step.
+ 3. If there are other words left, you ask your family.
+ 4. If you are struggling, googling it allowed, but only if you are struggling.
+ 5. Then, after googing some hard words, go back to step 2, it gets easier now, since you opened up some letters.
